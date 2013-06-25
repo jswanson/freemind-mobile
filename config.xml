@@ -6,10 +6,10 @@
         id        = "com.freemind.taka2me"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>Freemind Mobile Taka2Me</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Simple app to learn how to send short voice messages
     </description>
 
     <author href="http://freemind.net" email="jswanson@freemind.net">
@@ -51,6 +51,8 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
+	
+	<plugin name="Media" value="CDVSound" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />

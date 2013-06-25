@@ -17,6 +17,8 @@
 		
 			<script>
 
+			$(document).ready(function() {alert("hi!");});
+			
         // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -24,7 +26,10 @@
         // Cordova is ready
         //
         function onDeviceReady() {
-            playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
+            
+			alert("device ready!");
+			
+			//playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
         }
 
         // Audio player

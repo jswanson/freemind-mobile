@@ -16,8 +16,6 @@
 		
 		
 			<script>
-
-			//$(document).ready(function() {alert("hi!");});
 			
         // Wait for Cordova to load
         //
@@ -26,9 +24,11 @@
         // Cordova is ready
         //
         function onDeviceReady() {
-            
-			//alert("device ready!");
-			
+           
+           
+			alert(navigator.network.connection.type);
+			alert(navigator.networkState);
+
 			navigator.notification.vibrate(2000);
 			
 			playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");

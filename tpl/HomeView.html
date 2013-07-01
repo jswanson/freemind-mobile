@@ -43,8 +43,8 @@
 
         $('#network').html('Connection type: ' + states[networkState]);
 
-        var item = { text: "Awesome item" };
-        client.getTable("Item").insert(item);
+        var event = { text: "App Startup", date: Date() };
+        client.getTable("Event").insert(event);
 
         navigator.notification.vibrate(2000);
 			

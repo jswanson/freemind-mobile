@@ -1,20 +1,50 @@
-<div class="topcoat-navigation-bar">
-    <div class="topcoat-navigation-bar__item center full">
-        <h1 class="topcoat-navigation-bar__title">Employee Directory</h1>
-    </div>
-</div>
-<div class="search-bar">
-    <input type="search" placeholder="search" class="topcoat-search-input search-key" style="width:100%;">
-</div>
+<header class="bar-title"><h1 class="title">Employee Directory</h1></header>
+
+<div class="bar-standard bar-header-secondary"><input class='search-key' type="text" style="height:31px;"/></div>
+<div class="content"></div>
+
+<nav class="bar-tab">
+  <ul class="tab-inner">
+    <li class="tab-item active">
+      <a href="#">
+        <img class="tab-icon" src="img/icon-home.png">
+        <div class="tab-label">Start</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <img class="tab-icon" src="img/icon-profile.png">
+        <div class="tab-label">Pause</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <img class="tab-icon" src="img/icon-messages.png">
+        <div class="tab-label">Stop</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <img class="tab-icon" src="img/icon-hamburger.png">
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <img class="tab-icon" src="img/icon-settings.png">
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+  </ul>
+</nav>
+
 <div class="topcoat-list__container scroller" style="top:138px;">
     
-            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-        <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
-        <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+    <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
+    <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
+    <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
     <p id="audio_position"></p>
     <span id="network">hi!</span>
-
-
 </div>
 
 <script>

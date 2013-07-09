@@ -1,16 +1,19 @@
-app.views.EmployeeView = Backbone.View.extend({
+﻿app.views.SignInView = Backbone.View.extend({
 
     render: function () {
-        this.$el.html(this.template(this.model.attributes));
+        this.$el.empty();
+        
+        this.$el.html(this.template());
+
         return this;
     },
 
     events: {
         "click .back-button": "back",
         "click .home-button": "back"
-},
+    },
 
-    back: function(event) {
+    back: function (event) {
         window.history.back();
         return false;
     }

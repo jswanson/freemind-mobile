@@ -4,7 +4,8 @@ app.routers.AppRouter = Backbone.Router.extend({
         "":                         "home",
         "employees/:id":            "employeeDetails",
         "employees/:id/reports":    "reports",
-        "employees/:id/map":        "map"
+        "employees/:id/map":        "map",
+        "signin":                   "signin"
     },
 
     initialize: function () {
@@ -13,6 +14,7 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     home: function () {
+        console.debug("routes:home");
         // Since the home view never changes, we instantiate it and render it only once
         if (!app.homeView) {
             app.homeView = new app.views.HomeView();
@@ -25,7 +27,8 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     employeeDetails: function (id) {
-        var employee = new app.models.Employee({id: id});
+        console.debug("routes:employeeDetails");
+        var employee = new app.models.Employee({ id: id });
         employee.fetch({
             success: function (data) {
                 // Note that we could also 'recycle' the same instance of EmployeeFullView
@@ -36,7 +39,8 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     reports: function (id) {
-        var employee = new app.models.Employee({id: id});
+        console.debug("routes:reports");
+        var employee = new app.models.Employee({ id: id });
         employee.fetch({
             success: function (data) {
                 // Note that we could also 'recycle' the same instance of EmployeeFullView
@@ -47,7 +51,13 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     map: function (id) {
+        console.debug("routes:maps");
         app.slider.slidePage(new app.views.MapView().render().$el);
+    },
+    
+    signin: function () {
+        console.debug("routes:signin");
+        app.slider.slidePage(new app.views.SignInView().render().$el);
     }
 
 });
